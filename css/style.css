@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Cormorant Upright";
+  font-display: swap;
+  src: url("../fonts/CormorantUpright-Bold.woff2") format("woff2"), url("../fonts/CormorantUpright-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: BestermindRegular;
   font-display: swap;
   src: url("../fonts/BestermindRegular.woff2") format("woff2"), url("../fonts/BestermindRegular.woff") format("woff");
@@ -7,14 +15,53 @@
 }
 
 @font-face {
-  font-family: icons;
+  font-family: "Cormorant Upright";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("../fonts/CormorantUpright-SemiBold.woff2") format("woff2"), url("../fonts/CormorantUpright-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cormorant Upright";
+  font-display: swap;
+  src: url("../fonts/CormorantUpright-Medium.woff2") format("woff2"), url("../fonts/CormorantUpright-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
-.gallery__slide-ibg::before,
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
 [class*=_icon-]:before {
   font-family: "icons";
   font-style: normal;
@@ -34,8 +81,7 @@
   content: "\e900";
 }
 
-._icon-instagramm:before,
-.gallery__slide-ibg:before {
+._icon-instagramm:before {
   content: "\e901";
 }
 
@@ -136,6 +182,7 @@ h6 {
 
 body {
   background-color: #0C0B08;
+  font-style: normal;
 }
 
 .lock body {
@@ -2760,14 +2807,16 @@ body::after {
 }
 
 .gallery__slide-ibg::before {
+  content: "";
   top: 50%;
   left: 50%;
+  width: 44px;
+  height: 44px;
   z-index: 5;
-  font-size: 43px;
-  color: #fff;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background: url("../img/icons/instagramm.svg") center/cover no-repeat;
 }
 
 .gallery__slide-ibg::after {
@@ -5594,17 +5643,12 @@ body::after {
             justify-content: space-between;
   }
 
-  .footer__body :nth-child(1) {
-    -ms-grid-column-align: start;
-        justify-self: start;
-  }
-
-  .footer__body :nth-child(2) {
+  .footer__body:nth-child(2) {
     -ms-grid-column-align: center;
         justify-self: center;
   }
 
-  .footer__body :nth-child(3) {
+  .footer__body:nth-child(3) {
     -ms-grid-column-align: end;
         justify-self: end;
   }
